@@ -14,20 +14,17 @@ public class Algorithms {
         if (acronym == null || phrase == null) {
             throw new IllegalArgumentException("Acronym and phrase cannot be null");
         }
-
         acronym = acronym.toUpperCase();
         String[] words = phrase.split("[\\s-]+");
 
         if (acronym.length() != words.length) {
+            System.out.println("qui");
             return false;
         }
 
-        for (int i = 0; i < words.length; i++) {
-            if (words[i].isEmpty()) {
-                continue;
-            }
-
+        for (int i = 0; i < acronym.length(); i++) {
             if (words[i].charAt(0) != acronym.charAt(i)) {
+                System.out.println(words[i].charAt(0));
                 return false;
             }
         }
@@ -51,13 +48,12 @@ public class Algorithms {
             int key = array[i];
             int j = i - 1;
 
-            while (j > 0 && array[j] > key) {
+            while (j >= 0 && array[j] > key) {
                 array[j + 1] = array[j];
                 j = j - 1;
             }
             array[j + 1] = key;
         }
     }
-
 
 }

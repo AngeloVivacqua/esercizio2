@@ -4,7 +4,7 @@ public class App {
     public static void main(String[] args) {
         Algorithms alg = new Algorithms();
         String acronym = "CDL";
-        String phrase = "Corso Di Laurea";
+        String phrase = "Corso Di prova Laurea";
         System.out.println("The acronym matches: " + alg.checkAcronym(acronym, phrase));
 
         int[] array = new int[]{1, 8, 3, 2, 10};
